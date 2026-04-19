@@ -115,14 +115,17 @@ filtra el 99% automáticamente y solo avisa cuando hay algo crítico.
 
 ## Planes
 
-| | Starter | Team | Pro |
-|--|---------|------|-----|
-| **Precio** | 0€/mes | 249€/mes | 499€/mes |
-| **Servicios** | 3 | 25 | Ilimitados |
-| Score con reglas | ✅ | ✅ | ✅ |
+| | **Starter** | **Team** | **Pro** |
+|--|:-----------:|:--------:|:-------:|
+| Precio | **0€/mes** | **99€/mes** | **A consultar** |
+| Servicios | 5 | 25 | Ilimitados |
 | Score con Claude AI | ❌ | ✅ | ✅ |
-| Correlador IA | ❌ | ✅ | ✅ |
-| Notificaciones Slack | ❌ | ✅ | ✅ |
-| Postmortem con IA | ❌ | ✅ | ✅ |
+| Slack + Email | ❌ | ✅ | ✅ |
+| Postmortem IA | ❌ | ✅ | ✅ |
 
+!!! success "ROI inmediato"
+    Un incidente de 2h con 10 ingenieros = **4.000€**.
+    centinelAI Team = **99€/mes**. Previniendo 1 incidente al mes → **ROI del 3.940%**.
+
+[Crear cuenta gratis](https://centinelai.io/register){ .md-button .md-button--primary }
 [Ver todos los planes](plans/index.md){ .md-button }

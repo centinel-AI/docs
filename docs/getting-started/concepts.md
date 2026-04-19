@@ -33,6 +33,8 @@ Al resolver un incidente, centinelAI genera un postmortem con IA.
 
 | Función | Starter | Team | Pro |
 |---------|---------|------|-----|
+| **Precio** | **0€/mes** | **99€/mes** | **A consultar** |
+| Servicios | 5 | 25 | Ilimitados |
 | Webhook receiver | ✅ | ✅ | ✅ |
 | Deduplicación | ✅ | ✅ | ✅ |
 | Score con reglas | ✅ | ✅ | ✅ |

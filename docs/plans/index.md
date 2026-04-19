@@ -4,8 +4,8 @@
 
 | Característica | Starter | Team | Pro |
 |----------------|:-------:|:----:|:---:|
-| **Precio** | **0€/mes** | **249€/mes** | **499€/mes** |
-| Servicios monitorizados | 3 | 25 | Ilimitados |
+| **Precio** | **0€/mes** | **99€/mes** | **A consultar** |
+| Servicios monitorizados | 5 | 25 | Ilimitados |
 | **Conectores** | | | |
 | Kubernetes | ✅ | ✅ | ✅ |
 | Prometheus / Grafana | ✅ | ✅ | ✅ |
@@ -27,11 +27,11 @@
 
     **10 ingenieros × 200€/hora × 2 horas = 4.000€**
 
-    centinelAI Team cuesta **249€/mes**.
+    centinelAI Team cuesta **99€/mes**.
 
-    Previniendo **1 incidente al mes** → **ROI del 1.507%**
+    Previniendo **1 incidente al mes** → **ROI del 3.940%**
 
 ## Empezar
 
 [Crear cuenta gratis](https://centinelai.io/register){ .md-button .md-button--primary }
-[Hablar con ventas](mailto:info@centinelai.io){ .md-button }
+[Hablar con ventas](mailto:info@centinelai.io?subject=centinelAI Pro){ .md-button }

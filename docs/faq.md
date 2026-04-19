@@ -46,8 +46,21 @@ Los datos se envían a la API de Anthropic para el análisis.
 Anthropic no usa datos de la API para entrenar modelos.
 Ver: [anthropic.com/privacy](https://anthropic.com/privacy)
 
+## Precios
+
+**¿Qué incluye el plan Starter?**
+Gratuito para siempre, hasta 5 servicios, scoring con reglas básicas.
+Sin tarjeta de crédito.
+
+**¿Qué incluye el plan Team?**
+99€/mes: hasta 25 servicios, Claude AI scoring, Slack, postmortem y correlador.
+
+**¿Cuánto cuesta el plan Pro?**
+Precio a consultar según tamaño del equipo.
+Escribe a [info@centinelai.io](mailto:info@centinelai.io?subject=centinelAI Pro).
+
 ## Soporte
 
 **¿Cómo contacto con soporte?**
 - Email: [info@centinelai.io](mailto:info@centinelai.io)
-- Docs: [github.com/centinelai/docs](https://github.com/centinelai/docs)
+- Docs: [github.com/centinel-AI/docs](https://github.com/centinel-AI/docs)
