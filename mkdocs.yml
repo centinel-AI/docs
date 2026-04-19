@@ -128,10 +128,12 @@ nav:
     - api-reference/index.md
     - Autenticación: api-reference/authentication.md
     - Webhooks: api-reference/webhooks.md
+    - Endpoints: api-reference/endpoints.md
   - Dashboard:
     - dashboard/index.md
     - Servicios: dashboard/services.md
     - Incidentes: dashboard/incidents.md
     - Archivo de alertas: dashboard/alerts-archive.md
+    - Facturación: dashboard/billing.md
   - Planes: plans/index.md
   - FAQ: faq.md
