@@ -1,0 +1,84 @@
+/* Hero section */
+.hero {
+  background: linear-gradient(135deg, #5B4FCF15 0%, #1D9E7515 100%);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+  border: 1px solid #5B4FCF20;
+}
+
+.hero-title {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #5B4FCF, #1D9E75);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem !important;
+}
+
+.hero-cta {
+  margin-top: 1.5rem !important;
+}
+
+/* Brand colors */
+:root {
+  --md-primary-fg-color: #5B4FCF;
+  --md-accent-fg-color: #1D9E75;
+}
+
+/* Code blocks */
+.highlight pre {
+  border-radius: 8px;
+}
+
+/* Cards */
+.md-typeset .grid.cards > ul > li {
+  border-radius: 12px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  box-shadow: 0 4px 20px rgba(91, 79, 207, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Score badges */
+.score-critical { color: #ef4444; font-weight: 700; }
+.score-high { color: #f97316; font-weight: 700; }
+.score-medium { color: #eab308; font-weight: 700; }
+.score-low { color: #22c55e; font-weight: 700; }
+
+/* Pipeline diagram */
+.pipeline-step {
+  background: var(--md-code-bg-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-left: 4px solid var(--md-primary-fg-color);
+}
+
+/* Admonition customization */
+.md-typeset .admonition.centinelai,
+.md-typeset details.centinelai {
+  border-color: #5B4FCF;
+}
+.md-typeset .centinelai > .admonition-title,
+.md-typeset .centinelai > summary {
+  background-color: #5B4FCF15;
+}
+.md-typeset .centinelai > .admonition-title::before,
+.md-typeset .centinelai > summary::before {
+  background-color: #5B4FCF;
+}
+
+/* Nav tabs */
+.md-tabs__link--active {
+  font-weight: 600;
+}
+
+/* Footer */
+.md-footer {
+  margin-top: 2rem;
+}
