@@ -5,35 +5,41 @@ cuando detecta alertas críticas (score > 70).
 
 ## Configuración
 
-### 1. Crea una Slack App
-[api.slack.com/apps](https://api.slack.com/apps) → **Create New App → From scratch**
-- Nombre: `centinelAI`
-- Selecciona tu workspace
+!!! note "Paso 1 — Crea una Slack App"
+    Ve a [api.slack.com/apps](https://api.slack.com/apps) →
+    **Create New App → From scratch**
 
-### 2. Añade Bot Token Scopes
-**OAuth & Permissions → Bot Token Scopes**:
-- `chat:write`
-- `chat:write.public`
-- `channels:read`
+    - Nombre: `centinelAI`
+    - Selecciona tu workspace
 
-### 3. Instala en tu workspace
-Click **Install to Workspace** → autoriza.
-Copia el **Bot User OAuth Token** (`xoxb-...`).
+!!! note "Paso 2 — Añade los scopes"
+    **OAuth & Permissions → Bot Token Scopes:**
 
-### 4. Activa Interactivity
-**Interactivity & Shortcuts → ON**
-Request URL: `https://centinelai.io/api/slack/actions`
+    - `chat:write`
+    - `chat:write.public`
+    - `channels:read`
 
-### 5. Configura en centinelAI
-**centinelai.io → Conectores → Slack**:
-- Bot Token (`xoxb-...`)
-- Canal (ej: `#alerts`)
-- Click **Guardar**
+!!! note "Paso 3 — Instala y copia el token"
+    Click **Install to Workspace** → autoriza.
+    Copia el **Bot User OAuth Token** (`xoxb-...`).
 
-### 6. Invita el bot al canal
-```
-/invite @centinelAI
-```
+    Además, activa **Interactivity & Shortcuts → ON** con Request URL:
+    `https://centinelai.io/api/slack/actions`
+
+!!! note "Paso 4 — Configura en centinelAI"
+    Ve a [centinelai.io/connectors/slack](https://centinelai.io/connectors/slack)
+    e introduce el token y el canal (ej: `#alerts`).
+
+!!! note "Paso 5 — Invita el bot"
+    En Slack, dentro del canal `#alerts`:
+    ```
+    /invite @centinelAI
+    ```
+
+!!! success "Slack configurado"
+    Las alertas con score >70 llegarán a tu canal con botones de acción.
+
+---
 
 ## Botones de acción
 

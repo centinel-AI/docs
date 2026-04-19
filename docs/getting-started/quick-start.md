@@ -8,63 +8,60 @@
 
 ## Opción A — Kubernetes (recomendado)
 
-### Paso 1 — Aplica el manifest
+!!! tip "Paso 1 — Aplica el manifest"
+    Un solo comando crea el namespace, RBAC y el agente:
 
-```bash
-kubectl apply -f https://centinelai.io/api/install/k8s/manifest.yaml
-```
+    ```bash
+    kubectl apply -f https://centinelai.io/api/install/k8s/manifest.yaml
+    ```
 
-Esto crea:
-- Namespace: `centinela-system`
-- ServiceAccount: `centinela-agent` (solo lectura)
-- ClusterRole + ClusterRoleBinding
-- Deployment del agente
+    Esto crea:
 
-### Paso 2 — Crea el secret con tu token
+    - Namespace: `centinela-system`
+    - ServiceAccount: `centinela-agent` (solo lectura)
+    - ClusterRole + ClusterRoleBinding
+    - Deployment del agente
 
-Encuentra tu API token en **centinelai.io → Conectores → Kubernetes**.
+!!! tip "Paso 2 — Crea el secret"
+    Encuentra tu token en **centinelai.io → Conectores → Kubernetes**
 
-```bash
-kubectl create secret generic centinela-token \
-  --from-literal=SENTINEL_TOKEN="tu-api-token" \
-  --from-literal=SENTINEL_API_URL="https://centinelai.io" \
-  -n centinela-system
-```
+    ```bash
+    kubectl create secret generic centinela-token \
+      --from-literal=SENTINEL_TOKEN="tu-api-token" \
+      --from-literal=SENTINEL_API_URL="https://centinelai.io" \
+      -n centinela-system
+    ```
 
-### Paso 3 — Reinicia el deployment
+!!! tip "Paso 3 — Reinicia y verifica"
+    ```bash
+    kubectl rollout restart deployment/centinela-agent -n centinela-system
+    kubectl logs -n centinela-system -l app=centinela-agent -f
+    ```
 
-```bash
-kubectl rollout restart deployment/centinela-agent -n centinela-system
-```
+    Logs esperados:
+    ```
+    [INFO] In-cluster config loaded
+    [INFO] Watching cluster events...
+    ```
 
-### Paso 4 — Verifica que funciona
+!!! tip "Paso 4 — Genera tu primera alerta de prueba"
+    ```bash
+    kubectl run crash-test \
+      --image=busybox \
+      --restart=Always \
+      -- sh -c "echo 'crashing'; exit 1"
+    ```
 
-```bash
-kubectl get pods -n centinela-system
-kubectl logs -n centinela-system -l app=centinela-agent -f
-```
+    Limpia cuando hayas verificado:
+    ```bash
+    kubectl delete pod crash-test
+    ```
 
-Logs esperados:
-```
-[INFO] In-cluster config loaded
-[INFO] Watching cluster events...
-```
+!!! success "¡Listo!"
+    En 60 segundos verás las primeras alertas en tu dashboard.
+    [Ver dashboard →](https://centinelai.io/dashboard)
 
-### Paso 5 — Genera tu primera alerta de prueba
-
-```bash
-kubectl run crash-test \
-  --image=busybox \
-  --restart=Always \
-  -- sh -c "echo 'crashing'; exit 1"
-```
-
-En 60 segundos verás la alerta en tu dashboard.
-
-Limpia cuando hayas verificado:
-```bash
-kubectl delete pod crash-test
-```
+---
 
 ## Opción B — Prometheus + Alertmanager
 
