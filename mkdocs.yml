@@ -1,0 +1,141 @@
+site_name: centinelAI Docs
+site_url: https://docs.centinelai.io
+site_description: Tu SRE que nunca duerme. Documentación oficial de centinelAI.
+site_author: centinelAI
+repo_url: https://github.com/centinelai/docs
+repo_name: centinelai/docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: es
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+    - announce.dismiss
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/centinelai
+    - icon: fontawesome/solid/globe
+      link: https://centinelai.io
+    - icon: fontawesome/solid/envelope
+      link: mailto:info@centinelai.io
+  analytics:
+    provider: google
+    property: G-GBNPQ85LBV
+  version:
+    provider: mike
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+plugins:
+  - search:
+      lang: es
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: true
+      enable_git_follow: false
+      type: date
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+      title: En esta página
+
+nav:
+  - Inicio: index.md
+  - Primeros pasos:
+    - getting-started/index.md
+    - Quick Start: getting-started/quick-start.md
+    - Conceptos clave: getting-started/concepts.md
+  - Conectores:
+    - connectors/index.md
+    - Kubernetes: connectors/kubernetes.md
+    - Prometheus: connectors/prometheus.md
+    - Grafana: connectors/grafana.md
+    - GitLab CI/CD: connectors/gitlab.md
+    - Slack: connectors/slack.md
+  - Pipeline de IA:
+    - ai-pipeline/index.md
+    - Deduplicador: ai-pipeline/deduplicator.md
+    - Scorer: ai-pipeline/scorer.md
+    - Correlador: ai-pipeline/correlator.md
+    - Notificador: ai-pipeline/notifier.md
+    - Postmortem: ai-pipeline/postmortem.md
+  - API Reference:
+    - api-reference/index.md
+    - Autenticación: api-reference/authentication.md
+    - Webhooks: api-reference/webhooks.md
+  - Dashboard:
+    - dashboard/index.md
+    - Servicios: dashboard/services.md
+    - Incidentes: dashboard/incidents.md
+    - Archivo de alertas: dashboard/alerts-archive.md
+  - Planes: plans/index.md
+  - FAQ: faq.md
