@@ -73,7 +73,7 @@ filtra el 99% automáticamente y solo avisa cuando hay algo crítico.
 
 <div class="grid cards" markdown>
 
--   :simple-kubernetes:{ .lg .middle } **Kubernetes**
+-   :material-kubernetes:{ .lg .middle } **Kubernetes**
 
     ---
 
@@ -82,7 +82,7 @@ filtra el 99% automáticamente y solo avisa cuando hay algo crítico.
 
     [:octicons-arrow-right-24: Configurar](connectors/kubernetes.md)
 
--   :simple-prometheus:{ .lg .middle } **Prometheus / Grafana**
+-   :material-chart-timeline-variant:{ .lg .middle } **Prometheus / Grafana**
 
     ---
 
@@ -91,7 +91,7 @@ filtra el 99% automáticamente y solo avisa cuando hay algo crítico.
 
     [:octicons-arrow-right-24: Configurar](connectors/prometheus.md)
 
--   :simple-gitlab:{ .lg .middle } **GitLab CI/CD**
+-   :fontawesome-brands-gitlab:{ .lg .middle } **GitLab CI/CD**
 
     ---
 
@@ -100,7 +100,7 @@ filtra el 99% automáticamente y solo avisa cuando hay algo crítico.
 
     [:octicons-arrow-right-24: Configurar](connectors/gitlab.md)
 
--   :simple-slack:{ .lg .middle } **Slack**
+-   :fontawesome-brands-slack:{ .lg .middle } **Slack**
 
     ---
 

@@ -7,7 +7,7 @@ o mediante el agente de Kubernetes.
 
 <div class="grid cards" markdown>
 
--   :simple-kubernetes:{ .lg .middle } **Kubernetes**
+-   :material-kubernetes:{ .lg .middle } **Kubernetes**
 
     ---
 
@@ -17,7 +17,7 @@ o mediante el agente de Kubernetes.
     **Setup:** ~2 min
     [:octicons-arrow-right-24: Configurar](kubernetes.md)
 
--   :simple-prometheus:{ .lg .middle } **Prometheus**
+-   :material-chart-timeline-variant:{ .lg .middle } **Prometheus**
 
     ---
 
@@ -27,7 +27,7 @@ o mediante el agente de Kubernetes.
     **Setup:** ~5 min
     [:octicons-arrow-right-24: Configurar](prometheus.md)
 
--   :simple-grafana:{ .lg .middle } **Grafana**
+-   :material-chart-areaspline:{ .lg .middle } **Grafana**
 
     ---
 
@@ -37,7 +37,7 @@ o mediante el agente de Kubernetes.
     **Setup:** ~3 min
     [:octicons-arrow-right-24: Configurar](grafana.md)
 
--   :simple-gitlab:{ .lg .middle } **GitLab CI/CD**
+-   :fontawesome-brands-gitlab:{ .lg .middle } **GitLab CI/CD**
 
     ---
 
@@ -47,7 +47,7 @@ o mediante el agente de Kubernetes.
     **Setup:** ~3 min
     [:octicons-arrow-right-24: Configurar](gitlab.md)
 
--   :simple-slack:{ .lg .middle } **Slack**
+-   :fontawesome-brands-slack:{ .lg .middle } **Slack**
 
     ---
 

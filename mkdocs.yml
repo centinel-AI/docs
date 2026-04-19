@@ -2,8 +2,8 @@ site_name: centinelAI Docs
 site_url: https://centinel-ai.github.io/docs/
 site_description: Tu SRE que nunca duerme. Documentación oficial de centinelAI.
 site_author: centinelAI
-repo_url: https://github.com/centinelai/docs
-repo_name: centinelai/docs
+repo_url: https://github.com/centinel-AI/docs
+repo_name: centinel-AI/docs
 edit_uri: edit/main/docs/
 
 theme:
