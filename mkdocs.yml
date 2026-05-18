@@ -18,14 +18,14 @@ theme:
       accent: teal
       toggle:
         icon: material/brightness-7
-        name: Cambiar a modo oscuro
+        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: deep purple
       accent: teal
       toggle:
         icon: material/brightness-4
-        name: Cambiar a modo claro
+        name: Switch to light mode
   font:
     text: Inter
     code: JetBrains Mono
@@ -46,9 +46,8 @@ theme:
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
-    - content.tooltips
     - toc.follow
-    - announce.dismiss
+    - header.autohide
 
 extra:
   social:
@@ -102,38 +101,38 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: true
-      title: En esta página
+      title: On this page
 
 nav:
-  - Inicio: index.md
-  - Primeros pasos:
+  - Home: index.md
+  - Getting started:
     - getting-started/index.md
-    - Quick Start: getting-started/quick-start.md
-    - Conceptos clave: getting-started/concepts.md
-  - Conectores:
+    - Quick start: getting-started/quick-start.md
+    - Key concepts: getting-started/concepts.md
+  - Connectors:
     - connectors/index.md
     - Kubernetes: connectors/kubernetes.md
     - Prometheus: connectors/prometheus.md
     - Grafana: connectors/grafana.md
     - GitLab CI/CD: connectors/gitlab.md
     - Slack: connectors/slack.md
-  - Pipeline de IA:
+  - AI Pipeline:
     - ai-pipeline/index.md
-    - Deduplicador: ai-pipeline/deduplicator.md
+    - Deduplicator: ai-pipeline/deduplicator.md
     - Scorer: ai-pipeline/scorer.md
-    - Correlador: ai-pipeline/correlator.md
-    - Notificador: ai-pipeline/notifier.md
+    - Correlator: ai-pipeline/correlator.md
+    - Notifier: ai-pipeline/notifier.md
     - Postmortem: ai-pipeline/postmortem.md
   - API Reference:
     - api-reference/index.md
-    - Autenticación: api-reference/authentication.md
+    - Authentication: api-reference/authentication.md
     - Webhooks: api-reference/webhooks.md
     - Endpoints: api-reference/endpoints.md
   - Dashboard:
     - dashboard/index.md
-    - Servicios: dashboard/services.md
-    - Incidentes: dashboard/incidents.md
-    - Archivo de alertas: dashboard/alerts-archive.md
-    - Facturación: dashboard/billing.md
-  - Planes: plans/index.md
+    - Services: dashboard/services.md
+    - Incidents: dashboard/incidents.md
+    - Alerts archive: dashboard/alerts-archive.md
+    - Billing: dashboard/billing.md
+  - Plans: plans/index.md
   - FAQ: faq.md

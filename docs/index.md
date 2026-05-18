@@ -4,6 +4,10 @@ hide:
   - toc
 ---
 
+!!! info "Language"
+    This documentation is in English.
+    Spanish version coming soon — [contact us](mailto:info@centinelai.io) if you need help in Spanish.
+
 # centinelAI Documentation
 
 <div class="hero" markdown>
