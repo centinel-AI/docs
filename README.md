@@ -1,40 +1,40 @@
 # centinelAI Docs
 
-Documentación oficial de **centinelAI** — Tu SRE que nunca duerme.
+Official documentation for **centinelAI** — Your SRE that never sleeps.
 
-## 📖 Leer la documentación
+## Read the documentation
 
 🌐 **[centinel-ai.github.io/docs](https://centinel-ai.github.io/docs/)**
 
 ---
 
-## Sobre centinelAI
+## About centinelAI
 
-centinelAI es una plataforma de observabilidad predictiva con IA
-para equipos DevOps. Absorbe todo el ruido de tu infraestructura,
-filtra el 99% automáticamente y solo avisa cuando hay algo crítico.
+centinelAI is an AI-powered observability platform for DevOps teams.
+It absorbs all your infrastructure noise, filters 99% automatically
+and only interrupts your team when something truly critical needs attention.
 
-- 🌐 Web: [centinelai.io](https://centinelai.io)
-- 📧 Contacto: [info@centinelai.io](mailto:info@centinelai.io)
-- 🐙 Organización: [github.com/centinel-AI](https://github.com/centinel-AI)
+- 🌐 Website: [centinelai.io](https://centinelai.io)
+- 📧 Contact: [info@centinelai.io](mailto:info@centinelai.io)
+- 🐙 GitHub: [github.com/centinel-AI](https://github.com/centinel-AI)
 
-## Contenido
+## Contents
 
-| Sección | Descripción |
+| Section | Description |
 |---------|-------------|
-| [Primeros pasos](docs/getting-started/) | Quick start en 10 minutos |
-| [Conectores](docs/connectors/) | K8s, Prometheus, GitLab, Slack |
-| [Pipeline de IA](docs/ai-pipeline/) | Los 4 agentes con Claude AI |
-| [API Reference](docs/api-reference/) | Webhooks y autenticación |
-| [Planes](docs/plans/) | Starter, Team y Pro |
-| [FAQ](docs/faq.md) | Preguntas frecuentes |
+| [Getting started](docs/getting-started/) | 10-minute quick start |
+| [Connectors](docs/connectors/) | K8s, Prometheus, GitLab, Slack |
+| [AI pipeline](docs/ai-pipeline/) | The 4 agents powered by Claude AI |
+| [API Reference](docs/api-reference/) | Webhooks and authentication |
+| [Plans](docs/plans/) | Starter, Team and Pro |
+| [FAQ](docs/faq.md) | Frequently asked questions |
 
-## Contribuir
+## Contributing
 
-¿Encuentras algo incorrecto o incompleto?
-Abre un [issue](https://github.com/centinel-AI/docs/issues)
-o un pull request directamente.
+Found something incorrect or incomplete?
+Open an [issue](https://github.com/centinel-AI/docs/issues)
+or submit a pull request.
 
-## Licencia
+## License
 
 MIT © [centinelAI](https://centinelai.io)
