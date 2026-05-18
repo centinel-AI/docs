@@ -1,22 +1,22 @@
 # Grafana Alerting
 
-## Configuración del contact point
+## Contact point configuration
 
-| Campo | Valor |
+| Field | Value |
 |-------|-------|
 | Name | centinelAI |
 | Integration | Webhook |
 | URL | `https://centinelai.io/api/webhooks/grafana` |
 | HTTP Method | POST |
 | Authorization Header Scheme | Bearer |
-| Authorization Header Credentials | TU_API_TOKEN |
+| Authorization Header Credentials | YOUR_API_TOKEN |
 
 ## Notification policy
 
-- Ve a **Alerting → Notification policies → Add policy**
+- Go to **Alerting → Notification policies → Add policy**
 - Contact point: `centinelAI`
 
-## Formato soportado
+## Supported format
 
 ```json
 {

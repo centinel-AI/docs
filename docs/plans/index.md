@@ -1,37 +1,37 @@
-# Planes
+# Plans
 
-## Comparativa completa
+## Full comparison
 
-| Característica | Starter | Team | Pro |
-|----------------|:-------:|:----:|:---:|
-| **Precio** | **0€/mes** | **99€/mes** | **A consultar** |
-| Servicios monitorizados | 5 | 25 | Ilimitados |
-| **Conectores** | | | |
+| Feature | Starter | Team | Pro |
+|---------|:-------:|:----:|:---:|
+| **Price** | **€0/mo** | **€99/mo** | **Custom** |
+| Monitored services | 5 | 25 | Unlimited |
+| **Connectors** | | | |
 | Kubernetes | ✅ | ✅ | ✅ |
 | Prometheus / Grafana | ✅ | ✅ | ✅ |
 | GitLab CI/CD | ✅ | ✅ | ✅ |
-| Slack (notificaciones) | ❌ | ✅ | ✅ |
-| **Pipeline de IA** | | | |
-| Deduplicación | ✅ | ✅ | ✅ |
-| Score con reglas | ✅ | ✅ | ✅ |
-| Score con Claude AI | ❌ | ✅ | ✅ |
-| Correlador IA | ❌ | ✅ | ✅ |
-| Notificador Claude Sonnet | ❌ | ✅ | ✅ |
-| Postmortem con IA | ❌ | ✅ | ✅ |
-| **Soporte** | Email | Prioritario | Dedicado |
+| Slack (notifications) | ❌ | ✅ | ✅ |
+| **AI Pipeline** | | | |
+| Deduplication | ✅ | ✅ | ✅ |
+| Rule-based scoring | ✅ | ✅ | ✅ |
+| Claude AI scoring | ❌ | ✅ | ✅ |
+| AI Correlator | ❌ | ✅ | ✅ |
+| Claude Sonnet Notifier | ❌ | ✅ | ✅ |
+| AI Postmortem | ❌ | ✅ | ✅ |
+| **Support** | Email | Priority | Dedicated |
 
-## ROI del plan Team
+## Team plan ROI
 
-!!! success "Calcula el retorno de inversión"
-    Un incidente de 2 horas en un equipo de 10 ingenieros:
+!!! success "Calculate your return on investment"
+    A 2-hour incident with a 10-engineer team:
 
-    **10 ingenieros × 200€/hora × 2 horas = 4.000€**
+    **10 engineers × €200/hour × 2 hours = €4,000**
 
-    centinelAI Team cuesta **99€/mes**.
+    centinelAI Team costs **€99/month**.
 
-    Previniendo **1 incidente al mes** → **ROI del 3.940%**
+    Preventing **1 incident per month** → **ROI of 3,940%**
 
-## Empezar
+## Get started
 
-[Crear cuenta gratis](https://centinelai.io/register){ .md-button .md-button--primary }
-[Hablar con ventas](mailto:info@centinelai.io?subject=centinelAI Pro){ .md-button }
+[Create free account](https://centinelai.io/register){ .md-button .md-button--primary }
+[Talk to sales](mailto:info@centinelai.io?subject=centinelAI Pro){ .md-button }

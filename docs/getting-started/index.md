@@ -1,34 +1,34 @@
-# Primeros pasos
+# Getting started
 
-Bienvenido a centinelAI. En esta sección encontrarás todo lo necesario
-para conectar tu infraestructura y empezar a recibir alertas inteligentes.
+Welcome to centinelAI. This section contains everything you need
+to connect your infrastructure and start receiving intelligent alerts.
 
-## ¿Por dónde empezar?
+## Where to begin
 
 <div class="grid cards" markdown>
 
--   :rocket:{ .lg .middle } **Quick Start**
+-   :rocket:{ .lg .middle } **Quick start**
 
     ---
 
-    Conecta tu primer cluster de Kubernetes en 10 minutos.
-    El camino más rápido para ver centinelAI en acción.
+    Connect your first Kubernetes cluster in 10 minutes.
+    The fastest path to seeing centinelAI in action.
 
-    [:octicons-arrow-right-24: Quick Start](quick-start.md)
+    [:octicons-arrow-right-24: Quick start](quick-start.md)
 
--   :material-lightbulb:{ .lg .middle } **Conceptos clave**
+-   :material-lightbulb:{ .lg .middle } **Key concepts**
 
     ---
 
-    Entiende cómo funciona el sistema de scores, grupos
-    e incidentes antes de empezar.
+    Understand how the scoring system, groups
+    and incidents work before you begin.
 
-    [:octicons-arrow-right-24: Conceptos](concepts.md)
+    [:octicons-arrow-right-24: Concepts](concepts.md)
 
 </div>
 
-## Requisitos previos
+## Prerequisites
 
-- Cuenta gratuita en [centinelai.io](https://centinelai.io)
-- `kubectl` configurado (para Kubernetes) o Alertmanager (para Prometheus)
-- 10 minutos
+- Free account at [centinelai.io](https://centinelai.io)
+- `kubectl` configured (for Kubernetes) or Alertmanager (for Prometheus)
+- 10 minutes

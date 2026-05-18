@@ -1,36 +1,36 @@
-# Archivo de alertas
+# Alerts Archive
 
-El archivo de alertas muestra el historial completo de todos los eventos
-recibidos por centinelAI, incluyendo los filtrados (score < 70).
+The alerts archive shows the complete history of all events
+received by centinelAI, including filtered ones (score < 70).
 
-## Columnas
+## Columns
 
-| Columna | Descripción |
-|---------|-------------|
-| Timestamp | Fecha y hora del evento |
-| Servicio | Servicio afectado |
-| Reason | Tipo de alerta (`CrashLoopBackOff`, etc.) |
-| Score | Score asignado por el pipeline |
-| Estado | Notificado / Filtrado / En incidente |
-| Fuente | Conector de origen |
+| Column | Description |
+|--------|-------------|
+| Timestamp | Event date and time |
+| Service | Affected service |
+| Reason | Alert type (`CrashLoopBackOff`, etc.) |
+| Score | Score assigned by the pipeline |
+| Status | Notified / Filtered / In incident |
+| Source | Origin connector |
 
-## Filtros disponibles
+## Available filters
 
-- **Rango de fechas** — Filtra por período
-- **Servicio** — Muestra solo alertas de un servicio
-- **Score mínimo** — Filtra por gravedad
-- **Fuente** — Kubernetes / Prometheus / Grafana / GitLab
-- **Estado** — Notificado / Filtrado
+- **Date range** — Filter by period
+- **Service** — Show only alerts from one service
+- **Minimum score** — Filter by severity
+- **Source** — Kubernetes / Prometheus / Grafana / GitLab
+- **Status** — Notified / Filtered
 
-## Exportación
+## Export
 
-El archivo puede exportarse en CSV desde el botón **Exportar**
-en la esquina superior derecha.
+The archive can be exported as CSV from the **Export** button
+in the top-right corner.
 
-## Retención de datos
+## Data retention
 
-| Plan | Retención |
+| Plan | Retention |
 |------|-----------|
-| Starter | 7 días |
-| Team | 30 días |
-| Pro | 90 días |
+| Starter | 7 days |
+| Team | 30 days |
+| Pro | 90 days |

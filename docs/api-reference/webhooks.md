@@ -4,7 +4,7 @@
 
 ```bash
 curl -X POST https://centinelai.io/api/webhooks/kubernetes \
-  -H "Authorization: Bearer TU_API_TOKEN" \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
     "namespace": "production",
@@ -23,7 +23,7 @@ curl -X POST https://centinelai.io/api/webhooks/kubernetes \
 
 ```bash
 curl -X POST https://centinelai.io/api/webhooks/prometheus \
-  -H "Authorization: Bearer TU_API_TOKEN" \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
     "version": "4",
@@ -40,13 +40,13 @@ curl -X POST https://centinelai.io/api/webhooks/prometheus \
 
 ## POST /api/webhooks/grafana
 
-Mismo formato que Prometheus con array `alerts`.
+Same format as Prometheus with an `alerts` array.
 
 ## POST /api/webhooks/gitlab
 
 ```bash
 curl -X POST https://centinelai.io/api/webhooks/gitlab \
-  -H "X-Gitlab-Token: TU_API_TOKEN" \
+  -H "X-Gitlab-Token: YOUR_API_TOKEN" \
   -H "X-Gitlab-Event: Pipeline Hook" \
   -H "Content-Type: application/json" \
   -d '{
@@ -56,17 +56,17 @@ curl -X POST https://centinelai.io/api/webhooks/gitlab \
   }'
 ```
 
-## Respuesta estándar
+## Standard response
 
 ```json
 { "received": true, "eventId": "uuid" }
 ```
 
-## Códigos de respuesta
+## Response codes
 
-| Código | Significado |
-|--------|-------------|
-| 200 | Evento recibido correctamente |
-| 401 | Token inválido o ausente |
-| 400 | Payload malformado |
-| 500 | Error interno |
+| Code | Meaning |
+|------|---------|
+| 200 | Event received successfully |
+| 401 | Invalid or missing token |
+| 400 | Malformed payload |
+| 500 | Internal error |

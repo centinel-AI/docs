@@ -2,65 +2,65 @@
 
 ## General
 
-**¿Qué es centinelAI?**
-Una plataforma de observabilidad con IA que filtra el 99% del ruido
-y solo interrumpe a tu equipo cuando algo crítico necesita atención humana.
+**What is centinelAI?**
+An AI-powered observability platform that filters 99% of the noise
+and only interrupts your team when something critical needs human attention.
 
-**¿Reemplaza a Prometheus, Grafana o Datadog?**
-No. Se integra con tu stack existente sin reemplazar nada.
+**Does it replace Prometheus, Grafana or Datadog?**
+No. It integrates with your existing stack without replacing anything.
 
-**¿Cuánto tiempo tarda la instalación?**
-Aproximadamente 10 minutos para el primer conector.
+**How long does installation take?**
+Approximately 10 minutes for the first connector.
 
-## Técnico
+## Technical
 
-**¿Qué pasa si centinelAI tiene una interrupción?**
-Tus alertas siguen generándose en tus herramientas existentes.
-centinelAI está en la ruta de notificaciones, no en la de monitorización.
+**What happens if centinelAI has an outage?**
+Your alerts keep firing in your existing tools.
+centinelAI sits in the notification path, not the monitoring path.
 
-**¿Dónde se almacenan los datos?**
-En Supabase (PostgreSQL) en la UE (Irlanda).
+**Where is data stored?**
+In Supabase (PostgreSQL) in the EU (Ireland).
 
-**¿La IA tiene acceso a mi infraestructura?**
-No. El agente solo lee metadatos de eventos (RBAC de solo lectura).
-Claude AI solo ve los metadatos del evento, nunca tu código o datos.
+**Does the AI have access to my infrastructure?**
+No. The agent only reads event metadata (read-only RBAC).
+Claude AI only sees event metadata — never your code or data.
 
-**¿Es fiable el score de IA?**
+**How reliable is the AI score?**
 
-| Tipo de alerta | Fiabilidad |
-|----------------|------------|
-| CrashLoopBackOff | ✅ Alta |
-| OOMKilled | ✅ Alta |
-| ImagePullBackOff | ✅ Alta |
-| Alertas Prometheus | 🟡 Media |
-| Alertas de negocio | 🔴 Baja |
+| Alert type | Reliability |
+|------------|-------------|
+| CrashLoopBackOff | ✅ High |
+| OOMKilled | ✅ High |
+| ImagePullBackOff | ✅ High |
+| Prometheus alerts | 🟡 Medium |
+| Business alerts | 🔴 Low |
 
-**¿Qué modelos de IA usa centinelAI?**
-- Scorer y Correlador: Claude Haiku
-- Notificador y Postmortem: Claude Sonnet
+**Which AI models does centinelAI use?**
+- Scorer and Correlator: Claude Haiku
+- Notifier and Postmortem: Claude Sonnet
 
-## Privacidad
+## Privacy
 
-**¿Anthropic tiene acceso a mis datos?**
-Los datos se envían a la API de Anthropic para el análisis.
-Anthropic no usa datos de la API para entrenar modelos.
-Ver: [anthropic.com/privacy](https://anthropic.com/privacy)
+**Does Anthropic have access to my data?**
+Data is sent to the Anthropic API for analysis.
+Anthropic does not use API data to train models.
+See: [anthropic.com/privacy](https://anthropic.com/privacy)
 
-## Precios
+## Pricing
 
-**¿Qué incluye el plan Starter?**
-Gratuito para siempre, hasta 5 servicios, scoring con reglas básicas.
-Sin tarjeta de crédito.
+**What does the Starter plan include?**
+Free forever, up to 5 services, rule-based scoring.
+No credit card required.
 
-**¿Qué incluye el plan Team?**
-99€/mes: hasta 25 servicios, Claude AI scoring, Slack, postmortem y correlador.
+**What does the Team plan include?**
+€99/month: up to 25 services, Claude AI scoring, Slack, postmortem and correlator.
 
-**¿Cuánto cuesta el plan Pro?**
-Precio a consultar según tamaño del equipo.
-Escribe a [info@centinelai.io](mailto:info@centinelai.io?subject=centinelAI Pro).
+**How much does the Pro plan cost?**
+Custom pricing based on team size.
+Write to [info@centinelai.io](mailto:info@centinelai.io?subject=centinelAI Pro).
 
-## Soporte
+## Support
 
-**¿Cómo contacto con soporte?**
+**How do I contact support?**
 - Email: [info@centinelai.io](mailto:info@centinelai.io)
 - Docs: [github.com/centinel-AI/docs](https://github.com/centinel-AI/docs)

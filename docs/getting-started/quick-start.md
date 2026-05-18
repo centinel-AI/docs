@@ -1,72 +1,69 @@
-# Quick Start — 10 minutos
+# Quick start — 10 minutes
 
-## Requisitos previos
+## Prerequisites
 
-- Cuenta en [centinelai.io](https://centinelai.io) (gratis, sin tarjeta)
-- Un cluster de Kubernetes con `kubectl` configurado
-- O Prometheus + Alertmanager
+- Account at [centinelai.io](https://centinelai.io) (free, no credit card)
+- A Kubernetes cluster with `kubectl` configured
+- Or Prometheus + Alertmanager
 
-## Opción A — Kubernetes (recomendado)
+## Option A — Kubernetes (recommended)
 
-### Paso 1 — Aplica el manifest
+!!! tip "Step 1 — Apply the manifest"
+    One command creates the namespace, RBAC and the agent:
 
-```bash
-kubectl apply -f https://centinelai.io/api/install/k8s/manifest.yaml
-```
+    ```bash
+    kubectl apply -f https://centinelai.io/api/install/k8s/manifest.yaml
+    ```
 
-Esto crea:
-- Namespace: `centinela-system`
-- ServiceAccount: `centinela-agent` (solo lectura)
-- ClusterRole + ClusterRoleBinding
-- Deployment del agente
+    This creates:
 
-### Paso 2 — Crea el secret con tu token
+    - Namespace: `centinela-system`
+    - ServiceAccount: `centinela-agent` (read-only)
+    - ClusterRole + ClusterRoleBinding
+    - Agent deployment
 
-Encuentra tu API token en **centinelai.io → Conectores → Kubernetes**.
+!!! tip "Step 2 — Create the secret"
+    Find your API token in **centinelai.io → Connectors → Kubernetes**
 
-```bash
-kubectl create secret generic centinela-token \
-  --from-literal=SENTINEL_TOKEN="tu-api-token" \
-  --from-literal=SENTINEL_API_URL="https://centinelai.io" \
-  -n centinela-system
-```
+    ```bash
+    kubectl create secret generic centinela-token \
+      --from-literal=SENTINEL_TOKEN="your-api-token" \
+      --from-literal=SENTINEL_API_URL="https://centinelai.io" \
+      -n centinela-system
+    ```
 
-### Paso 3 — Reinicia el deployment
+!!! tip "Step 3 — Restart and verify"
+    ```bash
+    kubectl rollout restart deployment/centinela-agent -n centinela-system
+    kubectl logs -n centinela-system -l app=centinela-agent -f
+    ```
 
-```bash
-kubectl rollout restart deployment/centinela-agent -n centinela-system
-```
+    Expected logs:
+    ```
+    [INFO] In-cluster config loaded
+    [INFO] Watching cluster events...
+    ```
 
-### Paso 4 — Verifica que funciona
+!!! tip "Step 4 — Generate your first test alert"
+    ```bash
+    kubectl run crash-test \
+      --image=busybox \
+      --restart=Always \
+      -- sh -c "echo 'crashing'; exit 1"
+    ```
 
-```bash
-kubectl get pods -n centinela-system
-kubectl logs -n centinela-system -l app=centinela-agent -f
-```
+    Clean up once verified:
+    ```bash
+    kubectl delete pod crash-test
+    ```
 
-Logs esperados:
-```
-[INFO] In-cluster config loaded
-[INFO] Watching cluster events...
-```
+!!! success "Done!"
+    Within 60 seconds you'll see the first alerts in your dashboard.
+    [Go to dashboard →](https://centinelai.io/dashboard)
 
-### Paso 5 — Genera tu primera alerta de prueba
+---
 
-```bash
-kubectl run crash-test \
-  --image=busybox \
-  --restart=Always \
-  -- sh -c "echo 'crashing'; exit 1"
-```
-
-En 60 segundos verás la alerta en tu dashboard.
-
-Limpia cuando hayas verificado:
-```bash
-kubectl delete pod crash-test
-```
-
-## Opción B — Prometheus + Alertmanager
+## Option B — Prometheus + Alertmanager
 
 ```yaml
 receivers:
@@ -75,7 +72,7 @@ receivers:
       - url: https://centinelai.io/api/webhooks/prometheus
         send_resolved: false
         http_config:
-          bearer_token: TU_API_TOKEN
+          bearer_token: YOUR_API_TOKEN
 
 route:
   receiver: centinelai
@@ -84,16 +81,16 @@ route:
   repeat_interval: 2m
 ```
 
-Recarga:
+Reload:
 ```bash
 curl -X POST http://localhost:9093/-/reload
 ```
 
-## Opción C — Grafana Alerting
+## Option C — Grafana Alerting
 
 1. **Alerting → Contact points → Add contact point**
-2. Tipo: **Webhook**
+2. Type: **Webhook**
 3. URL: `https://centinelai.io/api/webhooks/grafana`
 4. HTTP Method: `POST`
 5. Authorization Header Scheme: `Bearer`
-6. Authorization Header Credentials: `TU_API_TOKEN`
+6. Authorization Header Credentials: `YOUR_API_TOKEN`

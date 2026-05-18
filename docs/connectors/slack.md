@@ -1,44 +1,44 @@
 # Slack
 
-Slack es un conector de **salida** — centinelAI envía notificaciones
-cuando detecta alertas críticas (score > 70).
+Slack is an **output** connector — centinelAI sends notifications
+when it detects critical alerts (score > 70).
 
-## Configuración
+## Setup
 
-### 1. Crea una Slack App
+### 1. Create a Slack App
 [api.slack.com/apps](https://api.slack.com/apps) → **Create New App → From scratch**
-- Nombre: `centinelAI`
-- Selecciona tu workspace
+- Name: `centinelAI`
+- Select your workspace
 
-### 2. Añade Bot Token Scopes
+### 2. Add Bot Token Scopes
 **OAuth & Permissions → Bot Token Scopes**:
 - `chat:write`
 - `chat:write.public`
 - `channels:read`
 
-### 3. Instala en tu workspace
-Click **Install to Workspace** → autoriza.
-Copia el **Bot User OAuth Token** (`xoxb-...`).
+### 3. Install to workspace
+Click **Install to Workspace** → authorize.
+Copy the **Bot User OAuth Token** (`xoxb-...`).
 
-### 4. Activa Interactivity
+### 4. Enable Interactivity
 **Interactivity & Shortcuts → ON**
 Request URL: `https://centinelai.io/api/slack/actions`
 
-### 5. Configura en centinelAI
-**centinelai.io → Conectores → Slack**:
+### 5. Configure in centinelAI
+**centinelai.io → Connectors → Slack**:
 - Bot Token (`xoxb-...`)
-- Canal (ej: `#alerts`)
-- Click **Guardar**
+- Channel (e.g. `#alerts`)
+- Click **Save**
 
-### 6. Invita el bot al canal
+### 6. Invite the bot to the channel
 ```
 /invite @centinelAI
 ```
 
-## Botones de acción
+## Action buttons
 
-| Botón | Acción |
-|-------|--------|
-| 🚨 Declarar incidente | Crea un incidente en centinelAI |
-| 💤 Snooze 1h | Silencia la alerta 1 hora |
-| 📊 Ver dashboard | Abre el dashboard |
+| Button | Action |
+|--------|--------|
+| 🚨 Declare incident | Creates an incident in centinelAI |
+| 💤 Snooze 1h | Silences the alert for 1 hour |
+| 📊 View dashboard | Opens the centinelAI dashboard |

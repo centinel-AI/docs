@@ -1,23 +1,23 @@
-# Correlador
+# Correlator
 
-## Función
-Detecta patrones y relaciones entre alertas de distintos servicios
-para identificar causas raíz sistémicas.
+## Function
+Detects patterns and relationships between alerts from different services
+to identify systemic root causes.
 
-## Modelo
+## Model
 Claude Haiku
 
-## Disponibilidad
-Solo disponible en planes **Team** y **Pro**.
+## Availability
+Only available on **Team** and **Pro** plans.
 
-## Cómo funciona
+## How it works
 
-Cuando un grupo recibe un score > 30, el correlador analiza:
-- Alertas activas en otros servicios del mismo namespace
-- Eventos recientes de infraestructura (nodos, red)
-- Fallos de pipeline de GitLab del mismo repositorio
+When a group receives a score > 30, the correlator analyses:
+- Active alerts on other services in the same namespace
+- Recent infrastructure events (nodes, network)
+- GitLab pipeline failures from the same repository
 
-Si detecta un patrón, enriquece el grupo con un campo `correlations`:
+If a pattern is detected, the group is enriched with a `correlations` field:
 
 ```json
 {
@@ -26,14 +26,14 @@ Si detecta un patrón, enriquece el grupo con un campo `correlations`:
       "serviceId": "production/api-gateway",
       "reason": "HighLatency",
       "confidence": 0.87,
-      "explanation": "El servicio api-gateway muestra latencia alta desde el mismo timestamp"
+      "explanation": "api-gateway shows high latency since the same timestamp"
     }
   ]
 }
 ```
 
-## Ejemplo de correlación
+## Correlation example
 
-Un `NodeNotReady` en `node-3` puede correlacionar automáticamente con
-todos los pods que corren en ese nodo, elevando el score de cada uno
-e identificando la causa raíz como un fallo de nodo, no de aplicación.
+A `NodeNotReady` on `node-3` can automatically correlate with
+all pods running on that node, raising the score of each one
+and identifying the root cause as a node failure, not an application issue.

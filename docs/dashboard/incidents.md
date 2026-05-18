@@ -1,40 +1,40 @@
-# Incidentes
+# Incidents
 
-La sección de incidentes permite gestionar eventos críticos declarados
-por el equipo y ver los postmortems generados por IA.
+The incidents section allows you to manage critical events declared
+by the team and view AI-generated postmortems.
 
-## Ciclo de vida de un incidente
+## Incident lifecycle
 
 ```
 OPEN → INVESTIGATING → RESOLVED
 ```
 
-| Estado | Descripción |
+| Status | Description |
 |--------|-------------|
-| OPEN | Incidente declarado, sin asignar |
-| INVESTIGATING | Alguien está trabajando en ello |
-| RESOLVED | Incidente cerrado — se genera postmortem |
+| OPEN | Incident declared, unassigned |
+| INVESTIGATING | Someone is working on it |
+| RESOLVED | Incident closed — postmortem generated |
 
-## Crear un incidente
+## Create an incident
 
-Desde el dashboard:
-1. Click **Declarar incidente** en una ServiceCard o alerta
-2. Añade título y severidad
-3. El incidente queda abierto y visible para todo el equipo
+From the dashboard:
+1. Click **Declare incident** on a ServiceCard or alert
+2. Add title and severity
+3. The incident is open and visible to the whole team
 
-Desde Slack:
-- Click en el botón **🚨 Declarar incidente** de una notificación
+From Slack:
+- Click the **🚨 Declare incident** button on a notification
 
-## Resolver un incidente
+## Resolve an incident
 
-1. Abre el incidente desde la lista
-2. Click **Resolver incidente**
-3. Añade una nota de resolución (opcional)
-4. centinelAI genera automáticamente el postmortem (planes Team/Pro)
+1. Open the incident from the list
+2. Click **Resolve incident**
+3. Add a resolution note (optional)
+4. centinelAI automatically generates the postmortem (Team/Pro plans)
 
 ## Postmortem
 
-Al resolver, el postmortem aparece en la pestaña **Postmortem** del incidente.
-Puede exportarse en formato `.md` para incluirlo en la wiki del equipo.
+On resolution, the postmortem appears on the **Postmortem** tab of the incident.
+It can be exported as `.md` to include in the team wiki.
 
-Ver [Generador de Postmortem](../ai-pipeline/postmortem.md) para más detalles.
+See [Postmortem Generator](../ai-pipeline/postmortem.md) for more details.

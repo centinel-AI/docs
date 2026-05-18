@@ -1,29 +1,29 @@
-# Deduplicador
+# Deduplicator
 
-## Función
-Agrupa eventos similares del mismo servicio para evitar notificaciones duplicadas.
+## Function
+Groups similar events from the same service to avoid duplicate notifications.
 
-## Algoritmo
+## Algorithm
 
-El deduplicador opera con ventanas de **5 minutos**. Cuando llega un nuevo evento:
+The deduplicator operates with **5-minute** windows. When a new event arrives:
 
-1. Busca un grupo abierto del mismo servicio con el mismo `reason`
-2. Si existe, añade el evento al grupo y actualiza el contador
-3. Si no existe, crea un nuevo grupo y emite `centinelai/group.created`
+1. Looks for an open group from the same service with the same `reason`
+2. If found, adds the event to the group and updates the counter
+3. If not found, creates a new group and emits `centinelai/group.created`
 
-## Criterios de agrupación
+## Grouping criteria
 
-| Campo | Uso |
+| Field | Use |
 |-------|-----|
-| `serviceId` | Identifica el servicio afectado |
-| `reason` | Tipo de evento (`CrashLoopBackOff`, etc.) |
-| Ventana temporal | 5 minutos desde el primer evento |
+| `serviceId` | Identifies the affected service |
+| `reason` | Event type (`CrashLoopBackOff`, etc.) |
+| Time window | 5 minutes from the first event |
 
-## Resultado
+## Result
 
-50 eventos del mismo `CrashLoopBackOff` en el mismo pod
-generan **1 único grupo** con `count: 50`.
+50 events from the same `CrashLoopBackOff` on the same pod
+generate **1 single group** with `count: 50`.
 
-## Disponibilidad
+## Availability
 
-Disponible en todos los planes (Starter, Team, Pro).
+Available on all plans (Starter, Team, Pro).

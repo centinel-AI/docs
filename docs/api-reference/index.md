@@ -6,30 +6,30 @@
 https://centinelai.io
 ```
 
-## Autenticación
+## Authentication
 
-Todos los endpoints usan Bearer token authentication:
+All endpoints use Bearer token authentication:
 
 ```bash
-Authorization: Bearer TU_API_TOKEN
+Authorization: Bearer YOUR_API_TOKEN
 ```
 
 ## Endpoints
 
-| Método | Endpoint | Descripción |
+| Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/api/webhooks/kubernetes` | Eventos de Kubernetes |
-| `POST` | `/api/webhooks/prometheus` | Alertas de Alertmanager |
-| `POST` | `/api/webhooks/grafana` | Alertas de Grafana |
-| `POST` | `/api/webhooks/gitlab` | Eventos de GitLab CI/CD |
-| `GET` | `/api/install/k8s/manifest.yaml` | Manifest de instalación K8s |
-| `POST` | `/api/slack/actions` | Acciones de botones de Slack |
+| `POST` | `/api/webhooks/kubernetes` | Kubernetes events |
+| `POST` | `/api/webhooks/prometheus` | Alertmanager alerts |
+| `POST` | `/api/webhooks/grafana` | Grafana alerts |
+| `POST` | `/api/webhooks/gitlab` | GitLab CI/CD events |
+| `GET` | `/api/install/k8s/manifest.yaml` | K8s installation manifest |
+| `POST` | `/api/slack/actions` | Slack button actions |
 
-## Códigos de respuesta
+## Response codes
 
-| Código | Significado |
-|--------|-------------|
-| `200` | Evento recibido correctamente |
-| `400` | Payload malformado |
-| `401` | Token inválido o ausente |
-| `500` | Error interno |
+| Code | Meaning |
+|------|---------|
+| `200` | Event received successfully |
+| `400` | Malformed payload |
+| `401` | Invalid or missing token |
+| `500` | Internal error |

@@ -1,9 +1,9 @@
-# Conectores
+# Connectors
 
-centinelAI recibe alertas a través de webhooks HTTP autenticados
-o mediante el agente de Kubernetes.
+centinelAI receives alerts via authenticated HTTP webhooks
+or through the Kubernetes agent.
 
-## Disponibles
+## Available
 
 <div class="grid cards" markdown>
 
@@ -11,71 +11,69 @@ o mediante el agente de Kubernetes.
 
     ---
 
-    Agente Python con RBAC de solo lectura.
-    Detecta eventos en tiempo real sin configuración adicional.
+    Python agent with read-only RBAC.
+    Detects events in real time with no additional configuration.
 
     **Setup:** ~2 min
-    [:octicons-arrow-right-24: Configurar](kubernetes.md)
+    [:octicons-arrow-right-24: Configure](kubernetes.md)
 
 -   :material-chart-timeline-variant:{ .lg .middle } **Prometheus**
 
     ---
 
-    Compatible con Alertmanager webhook v4.
-    Cero cambios en tu configuración existente.
+    Compatible with Alertmanager webhook v4.
+    Zero changes to your existing configuration.
 
     **Setup:** ~5 min
-    [:octicons-arrow-right-24: Configurar](prometheus.md)
+    [:octicons-arrow-right-24: Configure](prometheus.md)
 
 -   :material-chart-areaspline:{ .lg .middle } **Grafana**
 
     ---
 
-    Compatible con Grafana Alerting (nuevo formato).
-    Contact point tipo Webhook con Bearer auth.
+    Compatible with Grafana Alerting (new format).
+    Webhook contact point with Bearer auth.
 
     **Setup:** ~3 min
-    [:octicons-arrow-right-24: Configurar](grafana.md)
+    [:octicons-arrow-right-24: Configure](grafana.md)
 
 -   :fontawesome-brands-gitlab:{ .lg .middle } **GitLab CI/CD**
 
     ---
 
-    Pipeline events y job failures.
-    Correlación automática con eventos de Kubernetes.
+    Pipeline events and job failures.
+    Automatic correlation with Kubernetes events.
 
     **Setup:** ~3 min
-    [:octicons-arrow-right-24: Configurar](gitlab.md)
+    [:octicons-arrow-right-24: Configure](gitlab.md)
 
 -   :fontawesome-brands-slack:{ .lg .middle } **Slack**
 
     ---
 
-    Notificaciones ricas con botones de acción.
-    Declara incidentes sin salir de Slack.
+    Rich notifications with action buttons.
+    Declare incidents without leaving Slack.
 
     **Setup:** ~2 min
-    [:octicons-arrow-right-24: Configurar](slack.md)
+    [:octicons-arrow-right-24: Configure](slack.md)
 
 </div>
 
-## Próximamente
+## Coming soon
 
-| Conector | Estado |
-|----------|--------|
-| GitHub Actions | 🔜 En desarrollo |
-| Datadog | 🔜 Planificado |
-| PagerDuty | 🔜 Planificado |
-| AWS CloudWatch | 🔜 Planificado |
+| Connector | Status |
+|-----------|--------|
+| GitHub Actions | 🔜 In development |
+| Datadog | 🔜 Planned |
+| PagerDuty | 🔜 Planned |
+| AWS CloudWatch | 🔜 Planned |
 
-## Autenticación
+## Authentication
 
-Todos los endpoints usan Bearer token:
-
-```bash
-Authorization: Bearer TU_API_TOKEN
+```
+Authorization: Bearer YOUR_API_TOKEN
 ```
 
-!!! tip "¿Dónde encuentro mi token?"
-    Ve a **centinelai.io → Conectores → cualquier conector** 
-    y verás tu API Token en la parte superior de la página.
+!!! tip "Where to find your token"
+    Go to **centinelai.io → Connectors → any connector**
+    and you'll see your API Token at the top of the page.

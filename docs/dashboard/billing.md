@@ -1,37 +1,37 @@
-# Facturación
+# Billing
 
-La sección de facturación permite gestionar el plan de suscripción
-y los datos de pago.
+The billing section lets you manage your subscription plan
+and payment details.
 
-## Plan actual
+## Current plan
 
-Muestra:
-- Plan activo (Starter / Team / Pro)
-- Fecha de renovación
-- Uso del mes: servicios activos vs. límite del plan
+Shows:
+- Active plan (Starter / Team / Pro)
+- Renewal date
+- Month usage: active services vs. plan limit
 
-## Cambiar de plan
+## Change plan
 
-1. Ve a **Dashboard → Facturación → Cambiar plan**
-2. Selecciona el nuevo plan
-3. El cambio es inmediato — se prorratean los días restantes
+1. Go to **Dashboard → Billing → Change plan**
+2. Select the new plan
+3. The change is immediate — remaining days are prorated
 
-## Métodos de pago
+## Payment methods
 
-centinelAI usa **Stripe** para gestionar los pagos de forma segura.
-Los datos de tarjeta nunca se almacenan en los servidores de centinelAI.
+centinelAI uses **Stripe** to handle payments securely.
+Card details are never stored on centinelAI servers.
 
-## Facturas
+## Invoices
 
-Las facturas en PDF están disponibles en **Facturación → Historial de facturas**.
+PDF invoices are available under **Billing → Invoice history**.
 
-## Cancelación
+## Cancellation
 
-Puedes cancelar en cualquier momento desde **Facturación → Cancelar suscripción**.
-Al cancelar, el plan continúa activo hasta el final del período pagado
-y luego pasa automáticamente a Starter (gratuito).
+You can cancel at any time from **Billing → Cancel subscription**.
+On cancellation, the plan remains active until the end of the paid period
+and then automatically reverts to Starter (free).
 
-## Contacto para facturación
+## Billing contact
 
-Para facturas personalizadas o contratos anuales:
+For custom invoices or annual contracts:
 [info@centinelai.io](mailto:info@centinelai.io)

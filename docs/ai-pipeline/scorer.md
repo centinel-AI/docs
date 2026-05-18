@@ -1,16 +1,16 @@
 # Alert Scorer
 
-## Función
-Evalúa cada grupo de alertas y asigna un score de 0-100.
+## Function
+Evaluates each alert group and assigns a score from 0 to 100.
 
-## Factores de scoring (Claude Haiku)
+## Scoring factors (Claude Haiku)
 
-- Tipo de alerta (`CrashLoopBackOff` > `BackOff`)
-- Número de eventos y frecuencia
-- Criticidad del servicio
-- Historial de alertas similares
+- Alert type (`CrashLoopBackOff` > `BackOff`)
+- Number of events and frequency
+- Service criticality
+- History of similar alerts
 
-## Score con reglas (plan Starter)
+## Rule-based scoring (Starter plan)
 
 | Reason | Score |
 |--------|-------|
@@ -20,12 +20,12 @@ Evalúa cada grupo de alertas y asigna un score de 0-100.
 | ImagePullBackOff | 60 |
 | BackOff | 40 |
 
-## Score con IA (plan Team/Pro)
+## AI scoring (Team/Pro plan)
 
-Claude Haiku analiza el contexto completo y genera un score
-con explicación en lenguaje natural.
+Claude Haiku analyses the full context and generates a score
+with a natural language explanation.
 
-Ejemplo de score_reason:
-> "CrashLoopBackOff crítico en servicio de pagos en producción.
-> 15 reinicios en 10 minutos indica fallo persistente, no transitorio.
-> Alto impacto en negocio. Score: 92/100"
+Example score_reason:
+> "Critical CrashLoopBackOff on payments service in production.
+> 15 restarts in 10 minutes indicates a persistent, not transient failure.
+> High business impact. Score: 92/100"

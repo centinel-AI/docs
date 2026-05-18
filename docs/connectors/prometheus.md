@@ -1,6 +1,6 @@
 # Prometheus / Alertmanager
 
-## Configuración en alertmanager.yml
+## Configuration in alertmanager.yml
 
 ```yaml
 receivers:
@@ -9,7 +9,7 @@ receivers:
       - url: https://centinelai.io/api/webhooks/prometheus
         send_resolved: false
         http_config:
-          bearer_token: TU_API_TOKEN
+          bearer_token: YOUR_API_TOKEN
 
 route:
   receiver: centinelai
@@ -19,11 +19,11 @@ route:
   repeat_interval: 2m
 ```
 
-## Test con curl
+## Test with curl
 
 ```bash
 curl -X POST https://centinelai.io/api/webhooks/prometheus \
-  -H "Authorization: Bearer TU_API_TOKEN" \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
     "version": "4",
@@ -38,4 +38,4 @@ curl -X POST https://centinelai.io/api/webhooks/prometheus \
   }'
 ```
 
-Respuesta: `{"received": true, "eventIds": ["uuid"]}`
+Response: `{"received": true, "eventIds": ["uuid"]}`

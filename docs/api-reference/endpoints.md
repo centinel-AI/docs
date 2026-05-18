@@ -1,14 +1,14 @@
-# Endpoints REST
+# REST Endpoints
 
-## Servicios
+## Services
 
 ### GET /api/services
 
-Devuelve todos los servicios de la organización.
+Returns all services in the organization.
 
 ```bash
 curl https://centinelai.io/api/services \
-  -H "Authorization: Bearer TU_API_TOKEN"
+  -H "Authorization: Bearer YOUR_API_TOKEN"
 ```
 
 ```json
@@ -26,24 +26,24 @@ curl https://centinelai.io/api/services \
 
 ### GET /api/services/:id
 
-Devuelve el detalle de un servicio con sus alertas recientes.
+Returns the detail of a service with its recent alerts.
 
-## Incidentes
+## Incidents
 
 ### GET /api/incidents
 
 ```bash
 curl https://centinelai.io/api/incidents \
-  -H "Authorization: Bearer TU_API_TOKEN"
+  -H "Authorization: Bearer YOUR_API_TOKEN"
 ```
 
 ### POST /api/incidents
 
-Crea un incidente manualmente.
+Creates an incident manually.
 
 ```json
 {
-  "title": "Fallo en api-payments",
+  "title": "api-payments failure",
   "serviceId": "uuid",
   "severity": "critical"
 }
@@ -51,25 +51,25 @@ Crea un incidente manualmente.
 
 ### PATCH /api/incidents/:id
 
-Actualiza el estado de un incidente.
+Updates the status of an incident.
 
 ```json
 { "status": "resolved" }
 ```
 
-Cuando el status cambia a `resolved`, centinelAI genera automáticamente
-el postmortem si el plan es Team o Pro.
+When the status changes to `resolved`, centinelAI automatically generates
+the postmortem if the plan is Team or Pro.
 
-## Alertas
+## Alerts
 
 ### GET /api/alerts
 
-Historial paginado de alertas.
+Paginated alert history.
 
-| Query param | Descripción | Default |
+| Query param | Description | Default |
 |-------------|-------------|---------|
-| `page` | Número de página | 1 |
-| `limit` | Resultados por página | 50 |
-| `serviceId` | Filtrar por servicio | — |
-| `from` | Fecha de inicio (ISO 8601) | — |
-| `to` | Fecha de fin (ISO 8601) | — |
+| `page` | Page number | 1 |
+| `limit` | Results per page | 50 |
+| `serviceId` | Filter by service | — |
+| `from` | Start date (ISO 8601) | — |
+| `to` | End date (ISO 8601) | — |

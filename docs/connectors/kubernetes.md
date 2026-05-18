@@ -1,58 +1,58 @@
 # Kubernetes
 
-## Instalación
+## Installation
 
-### Paso 1 — Aplica el manifest completo
+### Step 1 — Apply the full manifest
 
 ```bash
 kubectl apply -f https://centinelai.io/api/install/k8s/manifest.yaml
 ```
 
-Incluye: Namespace, ServiceAccount, ClusterRole, ClusterRoleBinding, Deployment.
+Includes: Namespace, ServiceAccount, ClusterRole, ClusterRoleBinding, Deployment.
 
-### Paso 2 — Crea el secret
+### Step 2 — Create the secret
 
 ```bash
 kubectl create secret generic centinela-token \
-  --from-literal=SENTINEL_TOKEN="TU_API_TOKEN" \
+  --from-literal=SENTINEL_TOKEN="YOUR_API_TOKEN" \
   --from-literal=SENTINEL_API_URL="https://centinelai.io" \
   -n centinela-system
 ```
 
-### Paso 3 — Reinicia
+### Step 3 — Restart
 
 ```bash
 kubectl rollout restart deployment/centinela-agent -n centinela-system
 ```
 
-### Paso 4 — Verifica
+### Step 4 — Verify
 
 ```bash
 kubectl get pods -n centinela-system
 kubectl logs -n centinela-system -l app=centinela-agent --tail=20
 ```
 
-## Eventos detectados
+## Detected events
 
-| Reason | Severity | Descripción |
+| Reason | Severity | Description |
 |--------|----------|-------------|
-| `CrashLoopBackOff` | critical | Pod reiniciándose continuamente |
-| `OOMKilled` | critical | Eliminado por falta de memoria |
-| `ImagePullBackOff` | warning | No se puede descargar la imagen |
-| `BackOff` | warning | Backoff general |
-| `NodeNotReady` | critical | Nodo no disponible |
+| `CrashLoopBackOff` | critical | Pod restarting continuously |
+| `OOMKilled` | critical | Killed due to out-of-memory |
+| `ImagePullBackOff` | warning | Cannot pull the container image |
+| `BackOff` | warning | General backoff |
+| `NodeNotReady` | critical | Node unavailable |
 
-## Desinstalación
+## Uninstallation
 
 ```bash
 kubectl delete -f https://centinelai.io/api/install/k8s/manifest.yaml
 kubectl delete secret centinela-token -n centinela-system
 ```
 
-## Imagen del agente
+## Agent image
 
 ```
 ghcr.io/centinel-ai/agent:latest
 ```
 
-Código: [github.com/centinel-AI/agent](https://github.com/centinel-AI/agent)
+Source: [github.com/centinel-AI/agent](https://github.com/centinel-AI/agent)

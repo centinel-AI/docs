@@ -1,20 +1,20 @@
 # GitLab CI/CD
 
-## Configuración
+## Setup
 
-Ve a tu proyecto → **Settings → Webhooks → Add new webhook**:
+Go to your project → **Settings → Webhooks → Add new webhook**:
 
-| Campo | Valor |
+| Field | Value |
 |-------|-------|
 | URL | `https://centinelai.io/api/webhooks/gitlab` |
-| Secret token | TU_API_TOKEN |
+| Secret token | YOUR_API_TOKEN |
 | Trigger | ✅ Pipeline events, ✅ Job events |
 
-## Test con curl
+## Test with curl
 
 ```bash
 curl -X POST https://centinelai.io/api/webhooks/gitlab \
-  -H "X-Gitlab-Token: TU_API_TOKEN" \
+  -H "X-Gitlab-Token: YOUR_API_TOKEN" \
   -H "X-Gitlab-Event: Pipeline Hook" \
   -H "Content-Type: application/json" \
   -d '{
@@ -24,7 +24,7 @@ curl -X POST https://centinelai.io/api/webhooks/gitlab \
   }'
 ```
 
-## Correlación automática
+## Automatic correlation
 
-centinelAI correlaciona fallos de pipeline de GitLab con eventos de Kubernetes
-del mismo servicio automáticamente.
+centinelAI automatically correlates GitLab pipeline failures
+with Kubernetes events from the same service.

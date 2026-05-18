@@ -1,42 +1,42 @@
-# Notificador
+# Notifier
 
-## Función
-Genera notificaciones en lenguaje natural y las envía a Slack y/o Email
-cuando un grupo supera score > 70.
+## Function
+Generates natural language notifications and sends them to Slack and/or Email
+when a group exceeds score > 70.
 
-## Modelo
+## Model
 Claude Sonnet
 
-## Disponibilidad
-Solo disponible en planes **Team** y **Pro**.
+## Availability
+Only available on **Team** and **Pro** plans.
 
-## Estructura del mensaje Slack
+## Slack message structure
 
 ```
 🔴 CRITICAL — api-payments (score: 92)
 
-CrashLoopBackOff en production/api-payments-abc
-15 reinicios en los últimos 10 minutos.
+CrashLoopBackOff in production/api-payments-abc
+15 restarts in the last 10 minutes.
 
-Causa probable: fallo en la conexión a base de datos
-tras el deploy de las 10:03.
+Probable cause: database connection failure
+after the 10:03 deployment.
 
-Acciones recomendadas:
-• Revisar logs: kubectl logs -n production api-payments-abc
-• Verificar conectividad a PostgreSQL
-• Considerar rollback al deploy anterior
+Recommended actions:
+• Check logs: kubectl logs -n production api-payments-abc
+• Verify PostgreSQL connectivity
+• Consider rolling back to the previous deployment
 
-[🚨 Declarar incidente] [💤 Snooze 1h] [📊 Ver dashboard]
+[🚨 Declare incident] [💤 Snooze 1h] [📊 View dashboard]
 ```
 
-## Canales de notificación
+## Notification channels
 
-| Canal | Configuración |
-|-------|--------------|
-| Slack | Bot Token + canal en **Conectores → Slack** |
-| Email | Dirección configurada en **Ajustes → Notificaciones** |
+| Channel | Configuration |
+|---------|---------------|
+| Slack | Bot Token + channel in **Connectors → Slack** |
+| Email | Address configured in **Settings → Notifications** |
 
-## Umbral de notificación
+## Notification threshold
 
-Solo se notifica cuando `score >= 70`. Configurable por servicio
-desde el dashboard en **Servicios → [servicio] → Ajustes**.
+Notifications are only sent when `score >= 70`. Configurable per service
+from the dashboard at **Services → [service] → Settings**.

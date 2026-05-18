@@ -1,40 +1,40 @@
-# Servicios
+# Services
 
-La vista de servicios muestra todas las integraciones activas como tarjetas
-con su estado actual y score en tiempo real.
+The services view shows all active integrations as cards
+with their current status and real-time score.
 
 ## ServiceCard
 
-Cada tarjeta muestra:
+Each card shows:
 
-| Campo | Descripción |
+| Field | Description |
 |-------|-------------|
-| Nombre | Identificador del servicio (`namespace/pod` o `alertname`) |
-| Estado | UP / DEGRADED / DOWN / CRITICAL |
-| Score | Último score calculado (0-100) |
-| Última alerta | Timestamp del último evento recibido |
-| Fuente | Kubernetes / Prometheus / Grafana / GitLab |
+| Name | Service identifier (`namespace/pod` or `alertname`) |
+| Status | UP / DEGRADED / DOWN / CRITICAL |
+| Score | Latest calculated score (0-100) |
+| Last alert | Timestamp of the last received event |
+| Source | Kubernetes / Prometheus / Grafana / GitLab |
 
-## Estados
+## Statuses
 
-| Estado | Color | Score |
+| Status | Color | Score |
 |--------|-------|-------|
-| UP | 🟢 Verde | 0-29 |
-| DEGRADED | 🟡 Amarillo | 30-69 |
-| DOWN | 🟠 Naranja | 70-89 |
-| CRITICAL | 🔴 Rojo | 90-100 |
+| UP | 🟢 Green | 0-29 |
+| DEGRADED | 🟡 Yellow | 30-69 |
+| DOWN | 🟠 Orange | 70-89 |
+| CRITICAL | 🔴 Red | 90-100 |
 
-## Acciones
+## Actions
 
-Desde cada tarjeta puedes:
-- **Ver detalle** — Historial completo de alertas del servicio
-- **Declarar incidente** — Crea un incidente vinculado al servicio
-- **Ajustes** — Configura el umbral de notificación del servicio
+From each card you can:
+- **View detail** — Full alert history for the service
+- **Declare incident** — Create an incident linked to the service
+- **Settings** — Configure the notification threshold for the service
 
-## Límite de servicios
+## Service limits
 
-| Plan | Servicios |
-|------|-----------|
-| Starter | 3 |
+| Plan | Services |
+|------|----------|
+| Starter | 5 |
 | Team | 25 |
-| Pro | Ilimitados |
+| Pro | Unlimited |

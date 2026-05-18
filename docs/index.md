@@ -10,14 +10,14 @@ hide:
 
 <div class="hero-content" markdown>
 
-## Tu SRE que nunca duerme. { .hero-title }
+## Your SRE that never sleeps. { .hero-title }
 
-centinelAI absorbe todo el ruido de tu infraestructura con IA,
-filtra el 99% automáticamente y solo avisa cuando hay algo crítico.
-**Sin cambiar tu stack.**
+centinelAI absorbs all the noise from your infrastructure with AI,
+filters 99% automatically and only alerts when something is critical.
+**Without changing your stack.**
 
-[Empezar en 10 minutos](getting-started/quick-start.md){ .md-button .md-button--primary .hero-cta }
-[Ver conectores](connectors/index.md){ .md-button }
+[Get started in 10 minutes](getting-started/quick-start.md){ .md-button .md-button--primary .hero-cta }
+[View connectors](connectors/index.md){ .md-button }
 
 </div>
 
@@ -25,51 +25,51 @@ filtra el 99% automáticamente y solo avisa cuando hay algo crítico.
 
 ---
 
-## ¿Cómo funciona?
+## How it works
 
 <div class="grid cards" markdown>
 
--   :material-webhook:{ .lg .middle } **Recibe alertas**
+-   :material-webhook:{ .lg .middle } **Receives alerts**
 
     ---
 
-    Webhooks desde Kubernetes, Prometheus, Grafana y GitLab.
-    Instalación en menos de 10 minutos.
+    Webhooks from Kubernetes, Prometheus, Grafana and GitLab.
+    Set up in under 10 minutes.
 
-    [:octicons-arrow-right-24: Ver conectores](connectors/index.md)
+    [:octicons-arrow-right-24: View connectors](connectors/index.md)
 
--   :material-robot:{ .lg .middle } **IA lo analiza**
-
-    ---
-
-    4 agentes con Claude AI evalúan cada alerta en contexto.
-    Score de 0 a 100 con explicación en lenguaje natural.
-
-    [:octicons-arrow-right-24: Pipeline de IA](ai-pipeline/index.md)
-
--   :material-bell-alert:{ .lg .middle } **Solo interrumpe cuando importa**
+-   :material-robot:{ .lg .middle } **AI analyses it**
 
     ---
 
-    Solo score >70 llega a tu equipo. Con causa probable,
-    impacto y acciones recomendadas.
+    4 agents powered by Claude AI evaluate each alert in context.
+    Score from 0 to 100 with a natural language explanation.
 
-    [:octicons-arrow-right-24: Ver notificador](ai-pipeline/notifier.md)
+    [:octicons-arrow-right-24: AI Pipeline](ai-pipeline/index.md)
 
--   :material-file-document-edit:{ .lg .middle } **Postmortem automático**
+-   :material-bell-alert:{ .lg .middle } **Only interrupts when it matters**
 
     ---
 
-    Al resolver un incidente, Claude Sonnet genera el postmortem
-    completo con timeline y causa raíz.
+    Only score >70 reaches your team — with probable cause,
+    impact and recommended actions.
 
-    [:octicons-arrow-right-24: Ver postmortem](ai-pipeline/postmortem.md)
+    [:octicons-arrow-right-24: View notifier](ai-pipeline/notifier.md)
+
+-   :material-file-document-edit:{ .lg .middle } **Automatic postmortem**
+
+    ---
+
+    When an incident is resolved, Claude Sonnet generates the full
+    postmortem with timeline and root cause.
+
+    [:octicons-arrow-right-24: View postmortem](ai-pipeline/postmortem.md)
 
 </div>
 
 ---
 
-## Conectores disponibles
+## Available connectors
 
 <div class="grid cards" markdown>
 
@@ -77,55 +77,55 @@ filtra el 99% automáticamente y solo avisa cuando hay algo crítico.
 
     ---
 
-    Agente Python en tu cluster. Detecta CrashLoops, OOMKills,
-    ImagePullBackOff y más en tiempo real.
+    Python agent in your cluster. Detects CrashLoops, OOMKills,
+    ImagePullBackOff and more in real time.
 
-    [:octicons-arrow-right-24: Configurar](connectors/kubernetes.md)
+    [:octicons-arrow-right-24: Configure](connectors/kubernetes.md)
 
 -   :material-chart-timeline-variant:{ .lg .middle } **Prometheus / Grafana**
 
     ---
 
-    Webhook receiver compatible con Alertmanager y Grafana Alerting.
-    Zero-config con tu stack existente.
+    Webhook receiver compatible with Alertmanager and Grafana Alerting.
+    Zero-config with your existing stack.
 
-    [:octicons-arrow-right-24: Configurar](connectors/prometheus.md)
+    [:octicons-arrow-right-24: Configure](connectors/prometheus.md)
 
 -   :fontawesome-brands-gitlab:{ .lg .middle } **GitLab CI/CD**
 
     ---
 
-    Detecta fallos de pipeline y correlaciona deploys con
-    anomalías de infraestructura automáticamente.
+    Detects pipeline failures and correlates deploys with
+    infrastructure anomalies automatically.
 
-    [:octicons-arrow-right-24: Configurar](connectors/gitlab.md)
+    [:octicons-arrow-right-24: Configure](connectors/gitlab.md)
 
 -   :fontawesome-brands-slack:{ .lg .middle } **Slack**
 
     ---
 
-    Notificaciones ricas con botones de acción. Declara incidentes
-    y silencia alertas sin salir de Slack.
+    Rich notifications with action buttons. Declare incidents
+    and snooze alerts without leaving Slack.
 
-    [:octicons-arrow-right-24: Configurar](connectors/slack.md)
+    [:octicons-arrow-right-24: Configure](connectors/slack.md)
 
 </div>
 
 ---
 
-## Planes
+## Plans
 
 | | **Starter** | **Team** | **Pro** |
 |--|:-----------:|:--------:|:-------:|
-| Precio | **0€/mes** | **99€/mes** | **A consultar** |
-| Servicios | 5 | 25 | Ilimitados |
-| Score con Claude AI | ❌ | ✅ | ✅ |
+| Price | **€0/mo** | **€99/mo** | **Custom** |
+| Services | 5 | 25 | Unlimited |
+| Claude AI scoring | ❌ | ✅ | ✅ |
 | Slack + Email | ❌ | ✅ | ✅ |
-| Postmortem IA | ❌ | ✅ | ✅ |
+| AI Postmortem | ❌ | ✅ | ✅ |
 
-!!! success "ROI inmediato"
-    Un incidente de 2h con 10 ingenieros = **4.000€**.
-    centinelAI Team = **99€/mes**. Previniendo 1 incidente al mes → **ROI del 3.940%**.
+!!! success "Immediate ROI"
+    A 2h incident with 10 engineers = **€4,000**.
+    centinelAI Team = **€99/month**. Preventing 1 incident per month → **ROI of 3,940%**.
 
-[Crear cuenta gratis](https://centinelai.io/register){ .md-button .md-button--primary }
-[Ver todos los planes](plans/index.md){ .md-button }
+[Create free account](https://centinelai.io/register){ .md-button .md-button--primary }
+[View all plans](plans/index.md){ .md-button }
